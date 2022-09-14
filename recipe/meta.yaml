@@ -1,5 +1,5 @@
 {% set name = "opentype-sanitizer" %}
-{% set version = "8.2.1" %}
+{% set version = "8.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentype-sanitizer-{{ version }}.tar.gz
-  sha256: b3d0dc6c03061ff9c05246e31719cadfc962e9d586aa2e7d613149bb20335ef2
+  sha256: 0b01a71314b6545544d540aa657ddf9fb6967bff69c57c8b5803aafbd7bf221a
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   skip: true  # [not linux]
 
 requirements:
